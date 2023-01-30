@@ -21,3 +21,9 @@ docker exec -it bds_solr post -c bdsdump /opt/bds_data/index.json
 ```
 
 Now you should see indexed data when you browse the [query interface](http://localhost:8983/solr/#/bdsdump/query) and click the 'Execute Query' button.
+
+Run index optimization script
+```
+wget https://raw.githubusercontent.com/obophenotype/brain_data_standards_queries/main/src/bds_api/scripts/solr_post_config.sh -O solr_post_config.sh
+bash solr_post_config.sh -h localhost -p 8983
+```
